@@ -1,3 +1,6 @@
+ALUNOS: Rian Pablo e Vinicius Kauã
+
+
 📔 Meu Diário de Receitas
 
 🛠️ Visão Geral do Projeto
@@ -40,7 +43,7 @@ Expo CLI (npm install -g expo-cli)
 
 Clone o Repositório:
 
-git clone [LINK_DO_SEU_REPOSITORIO]
+git clone [https://github.com/RianBarbosa1/meu-app-receitas]
 cd meu-app-receitas
 
 
