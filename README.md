@@ -1,50 +1,131 @@
-# Welcome to your Expo app 👋
+📔 Meu Diário de Receitas
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+🛠️ Visão Geral do Projeto
 
-## Get started
+Este projeto é uma aplicação móvel desenvolvida em React Native (Expo). O objetivo principal é simular um "Diário de Receitas", permitindo aos utilizadores criar, visualizar, editar e excluir receitas (CRUD), com persistência de dados local usando AsyncStorage.
 
-1. Install dependencies
+O projeto foi desenvolvido para praticar e demonstrar o uso de componentes nativos do React Native e a gestão de estado complexa.
 
-   ```bash
-   npm install
-   ```
+Objetivos de Aprendizagem e Componentes Praticados
 
-2. Start the app
+O desenvolvimento desta aplicação focou-se na implementação dos seguintes conceitos e componentes:
 
-   ```bash
-   npx expo start
-   ```
+Gestão de Estado: Uso de useState e useEffect para gerenciar o ciclo de vida e estado dos componentes.
 
-In the output, you'll find options to open the app in a
+Persistência de Dados: Implementação de um Custom Hook (useReceitas) para persistência estável no AsyncStorage.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+Componentes Nativos: Uso correto de:
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+FlatList / ScrollView: Para a listagem de receitas e layout responsivo.
 
-## Get a fresh project
+Picker / Slider: Para seleção de opções no formulário de receitas (ex: dificuldade, tempo).
 
-When you're ready, run:
+Switch / Modal: Para configurações e confirmações.
 
-```bash
-npm run reset-project
-```
+Arquitetura: Organização do código em componentes reutilizáveis e utilização de um Provedor de Contexto (Context API) para estado global (embora removido na versão final, a estrutura do Custom Hook suporta o Context API).
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+🚀 Como Executar o Projeto
 
-## Learn more
+Siga estes passos para clonar e iniciar o aplicativo no seu ambiente de desenvolvimento.
 
-To learn more about developing your project with Expo, look at the following resources:
+1. Pré-requisitos
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Node.js (LTS)
 
-## Join the community
+NPM ou Yarn
 
-Join our community of developers creating universal apps.
+Expo CLI (npm install -g expo-cli)
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+2. Instalação e Execução
+
+Clone o Repositório:
+
+git clone [LINK_DO_SEU_REPOSITORIO]
+cd meu-app-receitas
+
+
+Instale as Dependências:
+
+npm install
+# ou
+yarn install
+
+
+Inicie o Servidor do Expo:
+
+npx expo start --tunnel --clear
+
+
+Aceda à Aplicação:
+
+Use o aplicativo Expo Go no seu telemóvel para digitalizar o código QR exibido no terminal.
+
+Ou, use um emulador/simulador (Android Studio ou Xcode).
+
+📂 Estrutura do Código
+
+A aplicação segue uma estrutura modular para organização e reutilização.
+
+Pasta/Ficheiro
+
+Descrição
+
+app.js
+
+Componente principal que define o Stack.Navigator (estrutura de navegação).
+
+hooks/useReceitas.js
+
+Lógica central do aplicativo. Contém o estado principal (receitas), as funções CRUD (adicionar, deletar, etc.) e a gestão de AsyncStorage.
+
+screens/
+
+Contém os ecrãs principais do aplicativo (Home, Formulário, Configurações).
+
+screens/HomeScreen.js
+
+Ecrã de listagem de receitas (FlatList).
+
+screens/FormReceitaScreen.js
+
+Ecrã para criar ou editar receitas.
+
+screens/SettingsScreen.js
+
+Ecrã de configurações com Switch (Modo Escuro) e Modals (Informação e Confirmação de Limpeza).
+
+components/CardReceita.js
+
+Componente reutilizável para exibir cada item da receita na lista.
+
+🧪 Checklist de Testes Manuais
+
+Para verificar a robustez do aplicativo, execute os seguintes testes:
+
+Ação de Teste
+
+Resultado Esperado
+
+Criar Receita
+
+A nova receita deve aparecer imediatamente no HomeScreen.
+
+Persistir Dados
+
+Criar 2-3 receitas, fechar e reabrir o aplicativo. As receitas devem permanecer na lista.
+
+Editar Receita
+
+Modificar o nome/ingredientes de uma receita existente. A alteração deve refletir-se na lista.
+
+Apagar Receita
+
+Clicar em deletar numa receita. Ela deve ser removida da lista e do armazenamento.
+
+Limpar Dados
+
+Ir a Configurações, confirmar a limpeza. O HomeScreen deve ficar vazio após o recarregamento.
+
+Navegação
+
+A navegação entre Home, Formulário e Configurações deve ser fluida e sem erros.
