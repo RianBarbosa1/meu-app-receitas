@@ -113,7 +113,7 @@ export default function FormReceitaScreen({ navigation, route }) {
   items={items}
   setOpen={setOpenDropdown}
   setItems={setItems}
-  setValue={setDificuldade} // ✅ Corrigido
+  setValue={setDificuldade}
   containerStyle={{ width: '100%' }}
   style={styles.dropdown}
   dropDownContainerStyle={styles.dropdownContainer}
