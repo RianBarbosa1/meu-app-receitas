@@ -1,5 +1,7 @@
-ALUNOS: Rian Pablo e Vinicius Kauã
+ALUNOS: Rian Pablo, Vinicius Kauã e Gabriel Torres
 
+
+LINK EXPO: https://expo.dev/preview/update?message=feat%3A+Implementa%C3%A7%C3%A3o+final+do+Picker%2C+Slider+e+ajustes+de+formul%C3%A1rio.&updateRuntimeVersion=1.0.0&createdAt=2025-11-30T19%3A18%3A16.927Z&slug=exp&projectId=96b9d696-18ca-4428-8259-f06d93f86137&group=1c8b745f-39f6-4384-ab66-a11a867d87b7
 
 📔 Meu Diário de Receitas
 
